@@ -13,16 +13,19 @@ function loadText($filename){
 	return $text;
 }
 
-
-if( isset($_GET['lang']) ){
-	$lang=$_GET['lang'];
+if(isset($_COOKIE['lang'])){
+	$lang = $_COOKIE['lang'];
 	if($lang=='de' || $lang=='fr' || $lang=='it' || $lang=='en'){
-		$_SESSION['text']=loadText("languages/$lang.lang");
+		if($_SESSION['lang']!=$lang){
+			$_SESSION['text']=loadText("languages/$lang.lang");
+			$_SESSION['lang'] = $lang;
+		}
 	}
-} else {
-	if (!isset($_SESSION['text'])){
-		$_SESSION['text']=loadText('languages/de.lang');
-	}
+}else {
+	$t = time()+60*60*24; // expires in 1 day
+	setcookie('lang', 'de', $t);
+	$_SESSION['lang'] = 'de';
+	$_SESSION['text']=loadText("languages/de.lang");
 }
 
 ?>

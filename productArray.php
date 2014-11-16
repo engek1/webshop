@@ -1,5 +1,7 @@
 <?php
 
+require_once 'navigation.php';
+
 // Product Information
 $products = array (
 		11 => array (

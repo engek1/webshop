@@ -73,9 +73,27 @@
 	border-style: groove;
 }
 
+#shoppingChart {
+	background-color: #c0c0c0;
+}
+
 #shoppingChart table{
 	padding: 8px;
 	background-color: #c0c0c0;
 }
 
+#shoppingChart  input.removeItem{
+	float: right;
+	border: none;
+	background-color: #c0c0c0;
+}
 
+#shoppingChart  input.removeItem:hover {
+	background-color: white;
+}
+
+#checkout {
+	float: right;
+	margin: 2px;
+	padding: 2px;
+}
