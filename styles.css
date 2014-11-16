@@ -1,0 +1,81 @@
+@CHARSET "UTF-8";
+
+#header {
+	background-color: black;
+	color: white;
+	text-align: center;
+	padding: 5px;
+}
+
+#nav {
+	line-height: 30px;
+	background-color: black;
+	padding: 5px;
+}
+#nav a:link { text-decoration:none; font-weight:bold; color:#800000; }
+#nav a:visited { text-decoration:none; font-weight:bold; color:#800000; }
+#nav a:hover { text-decoration:none; font-weight:bold; background-color:white; }
+#nav a:active { text-decoration:none; font-weight:bold; background-color: white; }
+#nav a:focus { text-decoration:none; font-weight:bold; background-color:white; }
+
+#nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	background-color: gray;
+}
+
+#nav ul li {
+	display: inline-block;
+	padding: 0;
+	width: 10%;
+	text-align: center;
+}
+
+#nav li a {
+	padding: 10px;
+	display: block;
+}
+
+#nav .active {
+	background-color: #c0c0c0;
+}
+
+.product {
+  background-color: #ddd;
+  margin: 10px;
+  padding: 4px;
+  display: inline-block;
+}
+
+.product img {
+	max-height: 200px;
+	max-width: 250px;
+}
+
+#footer {
+	background-color: black;
+	color: white;
+	clear: both;
+	text-align: center;
+	padding: 5px;
+}
+
+.submit {
+	float: right;
+}
+
+#shoppingChart {
+	float: right;
+	margin-top: 10px;
+	border-color: black;
+	border: 1px;
+	border-style: groove;
+}
+
+#shoppingChart table{
+	padding: 8px;
+	background-color: #c0c0c0;
+}
+
+
