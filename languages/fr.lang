@@ -5,3 +5,6 @@ robot=Robot
 tractor=Tracteur
 hand=Main
 equipment=Accessoires
+price=Prix
+number=Nombre
+product=Produit

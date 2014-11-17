@@ -7,6 +7,10 @@
 	padding: 5px;
 }
 
+#header h1 {
+	cursor: pointer;
+}
+
 #nav {
 	line-height: 30px;
 	background-color: black;
@@ -96,4 +100,33 @@
 	float: right;
 	margin: 2px;
 	padding: 2px;
+}
+
+#productTable{
+	display: inline-block;
+}
+
+.checkout {
+	text-align: center;
+	margin: 20px;
+}
+
+.borderFine {
+	border: 1px solid black;
+	display: inline-block;
+	padding: 10px;
+}
+
+.back a {
+	padding: 12px;
+	font-size: 1em;
+}
+.back a:link { text-decoration:none; font-weight: bold; color:#800000; }
+.back a:visited { text-decoration:none; font-weight: bold; color: #800000; }
+.back a:hover { text-decoration:none; font-weight: bold; color: #800000; }
+.back a:active { text-decoration:none; font-weight: bold; color: #800000; }
+.back a:focus { text-decoration:none; font-weight: bold; color: #800000; }
+
+.bold {
+	font-weight: bold;
 }

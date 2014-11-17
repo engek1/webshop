@@ -24,7 +24,7 @@ function createCookie(value) {
 	</div>
 
 	<div id="header">
-		<h1>The Lawnmower</h1>
+		<h1 onclick="javascript:location.href='index.php'">The Lawnmower</h1>
 	</div>
 
 	<?php
@@ -37,6 +37,7 @@ function createCookie(value) {
 	echo getNavigation ();
 	
 	require_once 'shoppingCart.php';
+	handleCart();
 	echo getChart ();
 	
 	require_once 'products.php';

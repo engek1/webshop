@@ -1,7 +1,10 @@
-home = Home
-gas = Gas
-electro = Electro
-robot = Robot
-tractor = Tractors
-hand = Hand
-equipment= Accessories
+home=Home
+gas=Gas
+electro=Electro
+robot=Robot
+tractor=Tractors
+hand=Hand
+equipment=Accessories
+price=Price
+number=Number
+product=Product
