@@ -17,10 +17,10 @@ function createCookie(value) {
 <body>
 
 	<div>
-		<a onclick=createCookie('de') href="">DE</a>
-		<a onclick=createCookie('fr') href="">FR</a>
-		<a onclick=createCookie('it') href="">IT</a>
-		<a onclick=createCookie('en') href="">EN</a>
+		<a onclick="createCookie('de')" href="">DE</a>
+		<a onclick="createCookie('fr')" href="">FR</a>
+		<a onclick="createCookie('it')" href="">IT</a>
+		<a onclick="createCookie('en')" href="">EN</a>
 	</div>
 
 	<div id="header">

@@ -111,6 +111,10 @@
 	margin: 20px;
 }
 
+.checkout form table {
+	display: inline-block;
+}
+
 .borderFine {
 	border: 1px solid black;
 	display: inline-block;
