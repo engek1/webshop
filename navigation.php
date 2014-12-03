@@ -1,15 +1,7 @@
 <?php
 
 // navigation enum
-abstract class Place {
-	const HOME = 'home';
-	const GAS = 'gas';
-	const ELECTRO = 'electro';
-	const ROBOT = 'robot';
-	const TRACTOR = 'tractor';
-	const HAND = 'hand';
-	const EQUIPMENT = 'equipment';
-}
+require_once 'oop/Category.php';
 
 // navigation key for session and GET param
 const PLACE = 'place';
@@ -24,19 +16,19 @@ function getNavigation(){
 		}
 	}else{
 		if(!isset($_SESSION[PLACE])){
-			$_SESSION[PLACE]=Place::HOME;
+			$_SESSION[PLACE]=Category::HOME;
 		}
 	}
 	
 	// load navigation texts
 	$navigation = array(
-		Place::HOME => $_SESSION['text'][Place::HOME],
-		Place::GAS => $_SESSION['text'][Place::GAS],
-		Place::ELECTRO => $_SESSION['text'][Place::ELECTRO],
-		Place::ROBOT => $_SESSION['text'][Place::ROBOT],
-		Place::TRACTOR => $_SESSION['text'][Place::TRACTOR],
-		Place::HAND => $_SESSION['text'][Place::HAND],
-		Place::EQUIPMENT => $_SESSION['text'][Place::EQUIPMENT]
+		Category::HOME => $_SESSION['text'][Category::HOME],
+		Category::GAS => $_SESSION['text'][Category::GAS],
+		Category::ELECTRO => $_SESSION['text'][Category::ELECTRO],
+		Category::ROBOT => $_SESSION['text'][Category::ROBOT],
+		Category::TRACTOR => $_SESSION['text'][Category::TRACTOR],
+		Category::HAND => $_SESSION['text'][Category::HAND],
+		Category::EQUIPMENT => $_SESSION['text'][Category::EQUIPMENT]
 	);
 
 	$html = '<div id="nav">';
@@ -59,7 +51,7 @@ function getNavigation(){
 
 /** checks if place is valid */
 function isPlace($var){
-	$r = new ReflectionClass("Place");
+	$r = new ReflectionClass("Category");
 	$c = $r -> getConstants();
 	return in_array($var,$c);
 }

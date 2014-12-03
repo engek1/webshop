@@ -1,6 +1,9 @@
 <?php
-require_once 'productArray.php';
 require_once 'language.php';
+require_once 'db/productDB.php';
+
+$prodDb = new ProductDb();
+$products = $prodDb->getAllProducts();
 
 function handleCart(){
 	if (! isset ( $_SESSION ['shoppingCart'] )) {
@@ -57,10 +60,10 @@ function getProductList($productList){
 	
 	$total = 0;
 	foreach ( $productList as $id => $num ) {
-		$total += ($num * $GLOBALS ['products'] [$id] ['price']);
+		$total += ($num * $GLOBALS ['products'] [$id]->price);
 		$html .= "<tr>";
-		$html .= "<td>" . $GLOBALS ['products'] [$id] ['name'] . "</td>";
-		$html .= "<td>" . $GLOBALS ['products'] [$id] ['price'] . " CHF</td>";
+		$html .= "<td>" . $GLOBALS ['products'] [$id]->name . "</td>";
+		$html .= "<td>" . $GLOBALS ['products'] [$id]->price . " CHF</td>";
 		$html .= "<td><form method='post'><input type='hidden' name='removeProductId' value='$id' />";
 		$html .= "<input type='submit' class='removeItem' value='-'/></form></td>";
 		$html .= "<td>$num</td>";
@@ -82,8 +85,8 @@ function getProductListFinal($productList){
 	$html .= "<th colspan='3'>".$_SESSION['text']['number']."</th></tr>";
 	foreach ( $productList as $id => $num ) {
 		$html .= "<tr>";
-		$html .= "<td>" . $GLOBALS ['products'] [$id] ['name'] . "</td>";
-		$html .= "<td>" . $GLOBALS ['products'] [$id] ['price'] . " CHF</td>";
+		$html .= "<td>" . $GLOBALS ['products'] [$id]->name . "</td>";
+		$html .= "<td>" . $GLOBALS ['products'] [$id]->price . " CHF</td>";
 		$html .= "<td>$num</td>";
 		$html .= "<tr>";
 		$html .= "</tr>";
