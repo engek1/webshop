@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Light on/off</title>
+<script type="text/javascript"> 
+function change(){
+	var img = document.getElementById("light");
+	if(img.src.match('bulb_on.png')){
+		img.src = 'bulb_off.png';
+	} else {
+		img.src = 'bulb_on.png';
+	}
+}
+</script>
+</head>
+<body>
+<div>
+<img alt="bild" id="light" src="bulb_on.png" width="100px" height="100px" onclick="change()">
+</div>
+<div><span>Click the light bulb to turn on/off the light</span></div>
+</body>
+</html>

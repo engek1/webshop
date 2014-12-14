@@ -17,7 +17,7 @@ function getProducts(){
 	$html .= "<h1>Products - ".$_SESSION['text'][$category]."</h1>";
 	
 	foreach( $products as $product ) {
-		$html .= '<form class="product" method="post">';
+		$html .= '<form class="product" method="post" onmouseover="this.style.background = \'#f99\'" onmouseout="this.style.background = \'#ddd\'">';
 		$html .= "<h3>" . $product->name . "</h3>";
 		$html .= '<img src="' . $product->imgSource . '" />';
 		$html .= "<p> Price:  " . $product->price . " CHF</p>";
@@ -32,4 +32,4 @@ function getProducts(){
 	return $html;
 }
 
-?> 
+?>

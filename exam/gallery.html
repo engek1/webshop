@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+img.thumbnail100 {
+	width: 100px;
+	height: 100px;
+}
+img.thumbnail150 {
+	width: 150px;
+	height: 150px;
+}
+img.thumbnail200 {
+	width: 200px;
+	height: 200px;
+}
+</style>
+</head>
+<body>
+<script type="text/javascript">
+function resetSize(){
+	var selected = document.getElementById("size").value;
+	var style = "thumbnail100";
+	if(selected.match("klein")){
+		style = "thumbnail100";
+	}else if (selected.match("mittel")) {
+		style = "thumbnail150";
+	}else if(selected.match("gross")){
+		style = "thumbnail200";
+	}
+	var images = document.getElementById("gallery").getElementsByTagName("img");
+	for (var i = 0; i < images.length; i++) {
+		images[i].className = style;
+	}
+}
+</script>
+<select id="size">
+<option>klein</option>
+<option>mittel</option>
+<option>gross</option>
+</select>
+<button onclick="resetSize()">OK</button>
+<div id="gallery">
+	<img src="bulb_on.png" class="thumbnail100">
+	<img src="bulb_on.png" class="thumbnail100">
+	<img src="bulb_on.png" class="thumbnail100">
+	<img src="bulb_on.png" class="thumbnail100">
+	<img src="bulb_on.png" class="thumbnail100">
+	<img src="bulb_on.png" class="thumbnail100">
+	<img src="bulb_on.png" class="thumbnail100">
+</div>
+</body>
+</html>

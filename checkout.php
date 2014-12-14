@@ -52,12 +52,21 @@ function validate(inputField){
 }
 
 function validateMail(inputField) {
-    var x = inputField.value;
+    var mail = inputField.value;
+
+	if(mail.match("^([a-zA-Z0-9._-]+)@([a-zA-Z0-9._-]+)\.([a-zA-z]{2,4})$")){
+		inputField.style.borderColor = "rgb(238,238,238)";
+        return true;
+	} else {
+		inputField.style.borderColor = "#ff0000";
+    	return false;;
+	}
+    
     var atpos = x.indexOf("@");
     var dotpos = x.lastIndexOf(".");
     if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=x.length) {
     	inputField.style.borderColor = "#ff0000";
-       return false;
+    	return false;
     }else{
     	inputField.style.borderColor = "rgb(238,238,238)";
         return true;

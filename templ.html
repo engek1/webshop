@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>${title}</title>
+<link rel="stylesheet" type="text/css" href="${style}">
+<script type="text/javascript" src="js/language.js"></script>
+<script type="text/javascript" src="${script}"></script>
+</head>
+<body>
+	<div>
+		<a onclick="setLanguage('de')" href="">DE</a>
+		<a onclick="setLanguage('fr')" href="">FR</a>
+		<a onclick="setLanguage('it')" href="">IT</a>
+		<a onclick="setLanguage('en')" href="">EN</a>
+	</div>	
+	<div id="header">
+		<h1 onclick="javascript:location.href='index.php'">The Lawnmower</h1>
+	</div>
+${body}
+	<div id="footer">Copyright &copy; lawnmower.ch</div>
+</body>
+</html>
